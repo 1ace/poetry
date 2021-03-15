@@ -10,7 +10,7 @@ class LockCommand(InstallerCommand):
 
     options = [
         option(
-            "no-update", None, "Do not update locked versions, only refresh lock file."
+            "no-update", None, "Deprecated and ignored, for backward compatibility. Will be removed in version 2.0."
         ),
         option(
             "check",
@@ -42,6 +42,6 @@ file.
                 else 1
             )
 
-        self._installer.lock(update=not self.option("no-update"))
+        self._installer.lock(update=False)
 
         return self._installer.run()

@@ -158,6 +158,7 @@ class Installer:
 
         return self
 
+    #FIXME: can we remove the flag here?
     def lock(self, update: bool = True) -> "Installer":
         """
         Prepare the installer for locking only.

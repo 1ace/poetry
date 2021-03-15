@@ -97,7 +97,8 @@ def test_lock_no_update(command_tester_factory, poetry_with_old_lockfile, repo):
     )
 
     tester = command_tester_factory("lock", poetry=poetry_with_old_lockfile)
-    tester.execute("--no-update")
+    tester.execute()
+    # FIXME: check if any test relied on the old behaviour and fix them
 
     locker = Locker(
         lock=poetry_with_old_lockfile.pyproject.file.path.parent / "poetry.lock",

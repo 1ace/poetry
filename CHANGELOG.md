@@ -1,5 +1,11 @@
 # Change Log
 
+## [x.x.x] - xxxx-xx-xx
+
+### Changed
+
+- **BREAKING** `poetry lock --no-update` is now the default behaviour. (#xxxx](...))
+
 ## [1.1.4] - 2020-10-23
 
 ### Added
